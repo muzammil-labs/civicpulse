@@ -16,7 +16,7 @@ Deployed on *Google Cloud Run*.
 
 ## GitHub
 
-**[https://github.com/DrunkenNight/civicpulse](https://github.com/DrunkenNight/civicpulse/)**
+**[https://github.com/muzammil-labs/civicpulse](https://github.com/muzammil-labs/civicpulse)**
 
 ## Stack
 
