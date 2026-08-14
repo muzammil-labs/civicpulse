@@ -16,7 +16,7 @@ Deployed on *Google Cloud Run*.
 
 ## GitHub
 
-[github.com/cyber-rifle/vibe2skill-hackathon](https://github.com/DrunkenNight/civicpulse/)
+**[https://github.com/DrunkenNight/civicpulse](https://github.com/DrunkenNight/civicpulse/)**
 
 ## Stack
 
