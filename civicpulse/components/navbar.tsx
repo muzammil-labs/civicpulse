@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 
 const NAV_LINKS = [
-  { label: "How it works", href: "/#how-it-works" },
-  { label: "The Map", href: "/map" },
-  { label: "Dashboard", href: "/dashboard" },
-  { label: "For Cities", href: "/for-cities" },
-  { label: "About", href: "/about" },
+  { label: "How it works", href: "/civic#how-it-works" },
+  { label: "The Map", href: "/civic/map" },
+  { label: "Dashboard", href: "/civic/dashboard" },
+  { label: "For Cities", href: "/civic/for-cities" },
+  { label: "About", href: "/civic/about" },
 ];
 
 export function Navbar() {
@@ -26,7 +26,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full">
       <nav className={`transition-all duration-300 mx-auto flex h-16 max-w-6xl items-center justify-between px-5
         ${scrolled ? 'bg-white/90 backdrop-blur-md border-b border-[#E8E4DB]/60 shadow-sm' : 'bg-white/40 backdrop-blur-sm border-transparent'}`}>
-        <a href="/" className="iridescent-text font-display text-2xl font-medium tracking-tight">
+        <a href="/civic" className="iridescent-text font-display text-2xl font-medium tracking-tight">
           CivicPulse
         </a>
 
@@ -46,7 +46,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="/#upload"
+            href="/civic#upload"
             className="shimmer-btn rounded-full px-5 py-2 font-sans text-sm font-medium shadow-sm"
           >
             Report an Issue

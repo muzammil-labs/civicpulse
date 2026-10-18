@@ -93,13 +93,13 @@ export default function ForCitiesPage() {
                 className="shimmer-btn magnetic-btn rounded-full px-8 py-3 font-sans text-sm font-medium">
                 Request a Demo
               </a>
-              <a href="/dashboard"
+              <a href="/civic/dashboard"
                 className="inline-flex items-center gap-2 rounded-full border border-[#1A1208]
                 px-8 py-3 font-sans text-sm font-medium text-[#1A1208]
                 hover:bg-[#1A1208] hover:text-white transition-colors">
                 See Live Dashboard →
               </a>
-              <a href="/#how-it-works"
+              <a href="/civic#how-it-works"
                 className="inline-flex items-center gap-2 rounded-full border border-[#E8E4DB]
                 px-8 py-3 font-sans text-sm font-medium text-[#7A6A58]
                 hover:bg-[#FAF7F2] transition-colors">
@@ -216,7 +216,7 @@ export default function ForCitiesPage() {
 
       {/* How it works CTA — light theme block */}
       <motion.a
-        href="/#how-it-works"
+        href="/civic#how-it-works"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -274,7 +274,7 @@ export default function ForCitiesPage() {
                   Email us about your city
                 </a>
                 <a
-                  href="https://github.com/cyber-rifle/vibe2skill-hackathon"
+                  href="https://github.com/muzammil-labs/civicpulse"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 w-full rounded-xl border border-[#E8E4DB] px-5 py-3 text-sm font-mono text-[#1A1208] hover:bg-[#FAF7F2] transition-colors"

@@ -31,12 +31,12 @@ export function SiteFooter() {
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Navigation</p>
             <div className="flex flex-col gap-2.5">
               {[
-                { label: "How it works", href: "/#how-it-works" },
-                { label: "The Map", href: "/map" },
-                { label: "Dashboard", href: "/dashboard" },
-                { label: "For Cities", href: "/for-cities" },
-                { label: "About", href: "/about" },
-                { label: "Report an Issue", href: "/#upload" },
+                { label: "How it works", href: "/civic#how-it-works" },
+                { label: "The Map", href: "/civic/map" },
+                { label: "Dashboard", href: "/civic/dashboard" },
+                { label: "For Cities", href: "/civic/for-cities" },
+                { label: "About", href: "/civic/about" },
+                { label: "Report an Issue", href: "/civic#upload" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -69,7 +69,7 @@ export function SiteFooter() {
                 </div>
               </div>
               <a
-                href="https://github.com/cyber-rifle/vibe2skill-hackathon"
+                href="https://github.com/muzammil-labs/civicpulse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-xs text-white/50 hover:text-white transition-colors"

@@ -6,9 +6,20 @@
 
 @theme {
   --font-display: 'Cormorant Garamond', serif;
-  --font-sans: 'DM Sans', sans-serif;
+  --font-sans: var(--font-body), var(--font-telugu), var(--font-devanagari), 'DM Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
+  /* Community product (brand) */
+  --color-brand: #0F766E;
+  --color-brand-strong: #115E59;
+  --color-brand-soft: #E6F4F1;
+  --color-sun: #F59E0B;
+  --color-canvas: #F7F5F0;
+  --color-line: #E7E2D8;
+  --color-text: #1C1A16;
+  --color-subtle: #6B6457;
+
+  /* Civic mode */
   --color-ivory: #FAF7F2;
   --color-ivory-deep: #F2EDE4;
   --color-ink: #1A1208;

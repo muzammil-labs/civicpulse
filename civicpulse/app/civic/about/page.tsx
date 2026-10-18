@@ -112,56 +112,12 @@ export default function AboutPage() {
             >
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#E8957A] mb-4">The Problem</p>
               <h2 className="font-display text-4xl font-light text-[#1A1208] mb-6">
-                72% of civic complaints go unresolved after 30 days.
+                Too many civic complaints stall between filing and fixing.
               </h2>
-              {/* Visual gap bar */}
-              <div className="space-y-3 mt-8">
-                <div>
-                  <div className="flex justify-between text-xs font-mono text-[#7A6A58] mb-1.5">
-                    <span>Complaints filed</span>
-                    <span className="text-[#1A1208] font-semibold">100%</span>
-                  </div>
-                  <div className="h-3 bg-[#F2EDE4] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "100%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, ease: "easeOut" }}
-                      className="h-full bg-[#5BBFBF] rounded-full"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-mono text-[#7A6A58] mb-1.5">
-                    <span>Reach right department</span>
-                    <span className="text-[#D4AF37] font-semibold">41%</span>
-                  </div>
-                  <div className="h-3 bg-[#F2EDE4] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "41%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-                      className="h-full bg-[#D4AF37] rounded-full"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-xs font-mono text-[#7A6A58] mb-1.5">
-                    <span>Resolved within 30 days</span>
-                    <span className="text-[#E8957A] font-semibold">28%</span>
-                  </div>
-                  <div className="h-3 bg-[#F2EDE4] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "28%" }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
-                      className="h-full bg-[#E8957A] rounded-full"
-                    />
-                  </div>
-                </div>
-              </div>
+              <p className="mt-6 text-base leading-relaxed text-[#3D2E1A]">
+                Complaints often reach the wrong department, get filed twice, or
+                sit without an owner. Nobody can see what happened next.
+              </p>
               <p className="mt-4 text-xs font-mono text-[#7A6A58]">
                 The bottleneck is routing, not intent. Citizens care. The system fails them.
               </p>
@@ -225,7 +181,7 @@ export default function AboutPage() {
 
       {/* How it works CTA — light theme block */}
       <motion.a
-        href="/#how-it-works"
+        href="/civic#how-it-works"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -285,17 +241,17 @@ export default function AboutPage() {
       {/* Links section */}
       <section className="border-t border-[#E8E4DB] bg-[#FAF7F2]">
         <div className="mx-auto max-w-5xl px-5 py-16 flex flex-wrap gap-4">
-          <a href="https://github.com/cyber-rifle/vibe2skill-hackathon" target="_blank"
+          <a href="https://github.com/muzammil-labs/civicpulse" target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[#1A1208]
             px-6 py-2.5 font-mono text-sm text-[#1A1208] hover:bg-[#1A1208] hover:text-white
             transition-colors">
             View on GitHub →
           </a>
-          <a href="/for-cities" className="shimmer-btn rounded-full px-6 py-2.5 font-mono text-sm">
+          <a href="/civic/for-cities" className="shimmer-btn rounded-full px-6 py-2.5 font-mono text-sm">
             For Cities
           </a>
-          <a href="/#how-it-works"
+          <a href="/civic#how-it-works"
             className="inline-flex items-center gap-2 rounded-full border border-[#1A1208]
             px-6 py-2.5 font-mono text-sm text-[#1A1208]
             hover:bg-[#1A1208] hover:text-white transition-colors">

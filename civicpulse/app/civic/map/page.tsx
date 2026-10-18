@@ -78,7 +78,7 @@ export default function MapPage() {
               <p className="text-xs text-[#7A6A58] font-mono">{allReports.length} active · India</p>
             </div>
           </div>
-          <Link href="/#upload" className="shimmer-btn magnetic-btn rounded-full px-5 py-2 text-sm font-medium">
+          <Link href="/civic#upload" className="shimmer-btn magnetic-btn rounded-full px-5 py-2 text-sm font-medium">
             Report an Issue
           </Link>
         </div>
@@ -93,7 +93,7 @@ export default function MapPage() {
               <p className="text-4xl mb-3">🗺️</p>
               <p className="font-display text-xl text-[#1A1208]">No reports yet</p>
               <p className="text-sm text-[#7A6A58] mt-1">Be the first to report an issue</p>
-              <Link href="/#upload" className="mt-4 shimmer-btn rounded-full px-5 py-2 text-sm">Report an Issue</Link>
+              <Link href="/civic#upload" className="mt-4 shimmer-btn rounded-full px-5 py-2 text-sm">Report an Issue</Link>
             </div>
           ) : (
             <CivicMap 

@@ -441,7 +441,7 @@ export function UploadSection() {
     addConfirmedReport(newReport)
     // Feature 2 — Toast on confirm
     addToast("Report added to map", "success")
-    setTimeout(() => router.push('/map'), 1800)
+    setTimeout(() => router.push('/civic/map'), 1800)
     setShowConfirmPanel(false)
   }
 

@@ -1,6 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect } from 'react'
+import { seedReports } from '@/lib/seed-reports'
 
 export type ReportSeverity = 'low' | 'medium' | 'high'
 
@@ -39,7 +40,7 @@ const COMMENTS_STORAGE_KEY = 'civicpulse_comments'
 
 export function ReportProvider({ children }: { children: React.ReactNode }) {
   const [confirmedReports, setConfirmedReports] = useState<Report[]>([])
-  const [reportCount, setReportCount] = useState(1240)
+  const [reportCount, setReportCount] = useState(seedReports.length)
   const [comments, setComments] = useState<Record<string, { id: string; text: string; createdAt: string }[]>>({})
   const [hydrated, setHydrated] = useState(false)
 
@@ -51,7 +52,7 @@ export function ReportProvider({ children }: { children: React.ReactNode }) {
         const parsed = JSON.parse(raw)
         if (Array.isArray(parsed)) {
           setConfirmedReports(parsed)
-          setReportCount(1240 + parsed.length)
+          setReportCount(seedReports.length + parsed.length)
         }
       }
       

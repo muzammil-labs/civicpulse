@@ -183,7 +183,7 @@ export function Hero() {
             <a href="#upload" className="shimmer-btn magnetic-btn rounded-full px-8 py-3.5 font-sans text-sm font-semibold shadow-lg">
               Report an Issue
             </a>
-            <a href="/map" className="magnetic-btn inline-flex items-center gap-2 rounded-full border border-[#1A1208]
+            <a href="/civic/map" className="magnetic-btn inline-flex items-center gap-2 rounded-full border border-[#1A1208]
               bg-transparent px-8 py-3.5 font-sans text-sm font-medium text-[#1A1208] backdrop-blur-sm
               transition-all hover:bg-[#1A1208] hover:text-white">
               <MapIcon className="h-4 w-4" aria-hidden="true" />
@@ -204,7 +204,7 @@ export function Hero() {
             className="iridescent-border-animated rounded-2xl transform-style-3d transition-all duration-300"
           >
             <div className="rounded-2xl px-6 py-4 bg-white/70 backdrop-blur-md shadow-lg-warm border-white/50 border">
-              <StatCounter value={1240} suffix="+" label="Issues Reported"
+              <StatCounter value={0} suffix="" label="Reports on the map"
                 duration={1600} liveReportCount={true} darkMode={false} />
             </div>
           </motion.div>
@@ -213,7 +213,7 @@ export function Hero() {
             className="iridescent-border-animated rounded-2xl transform-style-3d transition-all duration-300"
           >
             <div className="rounded-2xl px-6 py-4 bg-white/70 backdrop-blur-md shadow-lg-warm border-white/50 border">
-              <StatCounter value={89} suffix="%" label="Resolved in 7 Days"
+              <StatCounter value={4} suffix="" label="AI review steps"
                 duration={1800} darkMode={false} />
             </div>
           </motion.div>
@@ -222,7 +222,7 @@ export function Hero() {
             className="iridescent-border-animated rounded-2xl transform-style-3d transition-all duration-300"
           >
             <div className="rounded-2xl px-6 py-4 bg-white/70 backdrop-blur-md shadow-lg-warm border-white/50 border">
-              <StatCounter value={14} suffix="+" label="Departments Linked"
+              <StatCounter value={5} suffix="" label="Departments routed"
                 duration={1400} darkMode={false} />
             </div>
           </motion.div>

@@ -1,14 +1,7 @@
-import type { Metadata } from 'next'
-import { Cormorant_Garamond, DM_Sans, JetBrains_Mono } from 'next/font/google'
-import 'leaflet/dist/leaflet.css'
-import 'leaflet.markercluster/dist/MarkerCluster.css'
-import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
+import type { Metadata, Viewport } from 'next'
+import { Cormorant_Garamond, DM_Sans, JetBrains_Mono, Noto_Sans_Devanagari, Noto_Sans_Telugu } from 'next/font/google'
 import './globals.css'
-import { ReportProvider } from '@/lib/report-context'
-import { ToastProvider } from '@/components/toast'
-
-import { ErrorBoundary } from '@/components/error-boundary'
-import { OfflineBanner } from '@/components/offline-banner'
+import { brand } from '@/lib/brand'
 
 const cormorant = Cormorant_Garamond({
   variable: '--font-display',
@@ -22,38 +15,46 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
 })
 
+const notoTelugu = Noto_Sans_Telugu({
+  variable: '--font-telugu',
+  subsets: ['telugu'],
+  weight: ['400', '500', '600'],
+})
+
+const notoDevanagari = Noto_Sans_Devanagari({
+  variable: '--font-devanagari',
+  subsets: ['devanagari'],
+  weight: ['400', '500', '600'],
+})
+
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
-  title: 'CivicPulse — Report it. Watch it act.',
-  description: 'CivicPulse turns a photo and a location into a routed civic report. Powered by Google AI Studio. Built for India\'s communities.',
+  title: {
+    default: `${brand.name} — the operating system for gated communities`,
+    template: `%s · ${brand.name}`,
+  },
+  description:
+    'Residents report issues with a photo. Committees get one clear queue, proof that work was done, and reports ready for the AGM.',
+  applicationName: brand.name,
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export const viewport: Viewport = {
+  themeColor: '#0F766E',
+  width: 'device-width',
+  initialScale: 1,
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} ${jetbrainsMono.variable} bg-[#FAF7F2]`}
+      className={`${cormorant.variable} ${dmSans.variable} ${notoTelugu.variable} ${notoDevanagari.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans antialiased">
-        <OfflineBanner />
-        <ErrorBoundary>
-          <ReportProvider>
-            <ToastProvider>
-              <div className="page-enter">
-                {children}
-              </div>
-            </ToastProvider>
-          </ReportProvider>
-        </ErrorBoundary>
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }

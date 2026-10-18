@@ -170,7 +170,7 @@ export default function Page() {
               </div>
               <div className="relative z-10">
                 <h3 className="font-display text-2xl font-medium text-[#1A1208] mb-2">Community map</h3>
-                <a href="/map" className="font-mono text-xs text-[#D4AF6A] hover:underline">
+                <a href="/civic/map" className="font-mono text-xs text-[#D4AF6A] hover:underline">
                   View all reports →
                 </a>
               </div>
@@ -190,8 +190,8 @@ export default function Page() {
               {[
                 { num: '< 30s', label: 'Time to submit a report' },
                 { num: '200m', label: 'Deduplication radius' },
-                { num: '14+', label: 'Departments covered' },
-                { num: '89%', label: 'Resolved within 7 days' },
+                { num: '5', label: 'Departments routed' },
+                { num: '4', label: 'AI review steps' },
               ].map(({ num, label }) => (
                 <div key={label} className="text-center">
                   <p className="font-display text-4xl font-light text-[#5BBFBF] mb-2">{num}</p>
@@ -230,7 +230,7 @@ export default function Page() {
           Already reported? Track it.
         </p>
         <Link
-          href="/map"
+          href="/civic/map"
           className="inline-flex items-center gap-2 rounded-full border border-[#1A1208] bg-transparent px-8 py-3 font-sans text-sm font-medium text-[#1A1208] transition-colors hover:bg-[#1A1208] hover:text-white"
         >
           🗺 View Community Map
