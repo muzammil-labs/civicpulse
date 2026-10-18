@@ -255,3 +255,19 @@ select tests.check(
    where org_id = '00000000-0000-4000-8000-000000000001' and status = 'closed' and duplicate_of is null
      and title not like 'Car parked%'),
   'another society cannot close demo issues');
+
+-- ── People directory ───────────────────────────────────────
+select tests.login('11111111-1111-4111-8111-111111111111');
+select tests.check(
+  (select count(*) >= 3 from public.org_people('00000000-0000-4000-8000-000000000001')),
+  'members can list people in their society');
+select tests.check(
+  (select display_name = 'Ravi' from public.org_people('00000000-0000-4000-8000-000000000001')
+   where profile_id = '22222222-2222-4222-8222-222222222222'),
+  'residents see first names only');
+select tests.logout();
+select tests.login('44444444-4444-4444-8444-444444444444');
+select tests.check(
+  (select count(*) = 0 from public.org_people('00000000-0000-4000-8000-000000000001')),
+  'outsiders cannot list people in another society');
+select tests.logout();

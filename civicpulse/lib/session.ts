@@ -2,6 +2,7 @@ import 'server-only'
 import { cache } from 'react'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { connection } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { isSupabaseConfigured } from '@/lib/supabase/config'
 import { MANAGER_ROLES, type MemberRole, type Membership, type Profile } from '@/lib/types'
@@ -55,6 +56,8 @@ export const getActiveOrg = cache(async () => {
 })
 
 export async function requireMember() {
+  // Private pages are always rendered per request, never prerendered at build time.
+  await connection()
   if (!isSupabaseConfigured()) redirect('/setup')
   const ctx = await getActiveOrg()
   if (!ctx) redirect('/login')

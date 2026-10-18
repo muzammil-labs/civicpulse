@@ -21,7 +21,8 @@ export async function requestDemo(_prev: DemoState, formData: FormData): Promise
   if (!parsed.success) return { ok: false, error: parsed.error.issues[0]?.message ?? 'Please check the form' }
   if (!isSupabaseConfigured()) return { ok: false, error: 'The demo form is not connected yet. Please email us instead.' }
 
-  const { website: _honeypot, ...row } = parsed.data
+  const { name, community, homes, email, phone, message } = parsed.data
+  const row = { name, community, homes, email, phone, message }
   const supabase = await createClient()
   const { error } = await supabase.from('demo_requests').insert(row)
   if (error) return { ok: false, error: 'Something went wrong. Please try again or email us.' }

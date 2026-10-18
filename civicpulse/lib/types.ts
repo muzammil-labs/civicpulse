@@ -71,6 +71,7 @@ export interface Issue {
   sla_due_at: string | null
   duplicate_of: string | null
   source: string
+  ai_meta: { source?: 'ai' | 'rules' } & Record<string, unknown> | null
   resolution_note: string | null
   rating: number | null
   rating_comment: string | null

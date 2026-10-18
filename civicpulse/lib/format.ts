@@ -26,6 +26,10 @@ export function formatDateTime(iso: string) {
   })
 }
 
+export function isWithinDays(iso: string | null, days: number, now = Date.now()) {
+  return Boolean(iso) && now - new Date(iso as string).getTime() < days * 86_400_000
+}
+
 export function dueLabel(iso: string | null, now = Date.now()) {
   if (!iso) return null
   const ms = new Date(iso).getTime() - now
