@@ -21,7 +21,7 @@ const QUEUE = [
 export function BeforeAfter() {
   const [pos, setPos] = useState(50)
   return (
-    <div className="relative mx-auto aspect-[4/3] w-full max-w-3xl select-none overflow-hidden rounded-3xl border border-line bg-white shadow-xl shadow-stone-900/5 sm:aspect-[16/10]">
+    <div className="relative mx-auto aspect-[4/5] w-full max-w-3xl select-none overflow-hidden rounded-3xl border border-line bg-white shadow-xl shadow-stone-900/5 sm:aspect-[16/10]">
       {/* After (underneath) */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-soft to-white p-5 sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-wider text-brand">After · committee queue</p>

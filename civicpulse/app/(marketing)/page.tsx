@@ -42,7 +42,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute -top-40 right-0 size-[36rem] rounded-full bg-brand-soft blur-3xl" aria-hidden />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 md:grid-cols-[1.1fr_1fr] md:pt-20">
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 pb-16 pt-14 sm:px-6 md:grid-cols-[1.1fr_1fr] md:pt-20">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-medium text-brand ring-1 ring-line">
               For gated communities &amp; RWAs · Launching in {brand.city}
